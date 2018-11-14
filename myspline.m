@@ -40,7 +40,7 @@ for y = 1:anzahlR
 end
 r = zeros(anzahlR,1);
 for x = 1:anzahlR
-   r(x) = (3*(yVector(x+2)-yVector(x+1))/h(x+1))-(3*(yVector(x+1)-yVector(x)/h(x)));
+   r(x) = 3*( (yVector(x+2)-yVector(x+1))/h(x+1) - (yVector(x+1)-yVector(x))/h(x) );
    
 end
 cVector = matrix\r;
