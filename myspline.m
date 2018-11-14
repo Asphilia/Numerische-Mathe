@@ -3,6 +3,16 @@ function [aVector, bVector, cVector, dVector] = myspline(xVector,yVector)
 %eingabewerte: x Werte in Vektor, y Werte in Vektor
 %rückgabewerte: a, b, c, d Werte in entsprechendem Vektor
 
+%nach Eingabefehlern suchen:
+if (length(xVector)~=length(yVector))
+    fprintf('Anzahl der x und y Koordinaten müssen übersinstimmen!');
+    return;
+end
+if(length(xVector) < 2)
+    fprintf('Mit weniger als 2 Werten kann ich nicht arbeiten.');
+    return;
+end
+
 %VECTOR INDEXE BEGINNEN BEI 1 UND NICHT BEI 0!!!!
 
 %for all xVector params minus the last:
