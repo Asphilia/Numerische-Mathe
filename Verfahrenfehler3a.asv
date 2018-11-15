@@ -1,0 +1,7 @@
+%Verhahrensfehler mit Formel
+% Plotten von Fehler von 3a)
+h = lispace(0,1);
+x =1;
+ev1 = -h.^2.*sin(x);
+ev1;
+loglog(ev1); grid on; legend({"Fehler von 3a"});
